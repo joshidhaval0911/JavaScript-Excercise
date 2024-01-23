@@ -1,0 +1,30 @@
+<!-- 14. Write a JavaScript program to get the difference between a given number and 13, if the number is broader than 13
+return double the absolute difference. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 14</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let userNum = parseInt(prompt("Enter any number : "));
+    let diff;
+
+    if (userNum <= 13) {
+        diff = 13 - userNum;
+    }
+    else {
+        diff = (userNum - 13) * 2;
+    }
+
+    alert("The difference is : " + diff);
+</script>
+
+</html>

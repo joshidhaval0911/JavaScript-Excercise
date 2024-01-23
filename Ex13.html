@@ -1,0 +1,66 @@
+<!-- 13. Write a JavaScript exercise to get the filename extension. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 13</title>
+</head>
+<style>
+    div {
+        text-align: center;
+    }
+
+    input {
+        width: 200px;
+        height: 22px;
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    button {
+        cursor: pointer;
+        width: 120px;
+        height: 60px;
+        border-radius: 10px;
+        background-color: lightcoral;
+        transition: all 0.3s;
+        font-size: 15px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        height: 60px;
+        background-color: coral;
+    }
+
+    p {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div>
+        <input type="text" name="extension" id="extension" placeholder="Enter file name"><br><br>
+        <button type="button" onclick="findExt()">Get Extension</button>
+    </div>
+    <p id="result"></p>
+</body>
+<script>
+    function findExt() {
+        let fileName = document.getElementById('extension').value;
+        console.log(fileName);
+        let extension = fileName.split('.');
+        console.log(extension);
+
+        document.getElementById('result').innerHTML = `The extension of ${fileName} is <b> ${extension[1]} </b>.`;
+    }
+</script>
+
+</html>
