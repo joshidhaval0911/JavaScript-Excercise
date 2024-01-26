@@ -1,0 +1,21 @@
+<!-- 24. Write a JavaScript program to create a string from a given string. This is done by taking the last 3 characters and adding them at both the front and back. The string length must be 3 or more. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 24</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let str = prompt("Enter the string : ");
+    let newStr = str.substring(str.length - 3, str.length) + str + str.substring(str.length - 3, str.length);
+    alert("Modified String : " + newStr);
+</script>
+
+</html>
