@@ -1,0 +1,34 @@
+<!-- 31. Write a program to check whether a specified character exists between the 2nd and 4th positions in a given string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 31</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let str = prompt("Enter the string : ");
+    let char = prompt("Enter the character : ");
+    let f = false;
+
+    for (var i = 0; i < str.length; i++) {
+        if (str.charAt(i) == char && (i >= 1 && i < 3)) {
+            f = true;
+            break;
+        }
+    }
+
+    if (f) {
+        alert("Character is matched at " + (i + 1) + " position.");
+    } else {
+        alert("Character is not matched in the string.");
+    }
+</script>
+
+</html>

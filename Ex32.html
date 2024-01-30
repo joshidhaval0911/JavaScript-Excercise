@@ -1,4 +1,4 @@
-<!-- 26. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them falls within the range. -->
+<!-- 32. Write a JavaScript program that checks whether the last digit of three positive integers is the same. -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excercise 26</title>
+    <title>Excercise 32</title>
 </head>
 
 <body>
@@ -15,10 +15,11 @@
 <script>
     let num1 = parseInt(prompt("Enter the number 1 : "));
     let num2 = parseInt(prompt("Enter the number 2 : "));
+    let num3 = parseInt(prompt("Enter the number 3 : "));
 
-    if((num1 >= 50 && num1 <= 99) && (num2 >= 50 && num2 <= 99)){
+    if (num1 % 10 === num2 % 10 && num1 % 10 === num3 % 10 && num2 % 10 === num3 % 10) {
         alert(true);
-    }else{
+    } else {
         alert(false);
     }
 </script>

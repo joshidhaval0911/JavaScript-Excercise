@@ -1,0 +1,25 @@
+<!-- 33. Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given string. If the string length is less than 3 convert all the characters to upper case. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 33</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let str = prompt("Enter the string : ");
+
+    if (str.length <= 3) {
+        alert(str.toUpperCase());
+    } else {
+        alert(str.substring(0, 3).toLowerCase() + str.substring(3, str.length));
+    }
+</script>
+
+</html>

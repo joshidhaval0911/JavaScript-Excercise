@@ -1,0 +1,32 @@
+<!-- 34. Write a JavaScript program to check a student's total marks in various examinations. The student will get A+ grade if the total marks are in the range 89..100 inclusive, if the examination is "Final-exam" the student will receive A+ grade and total marks must be greater than or equal to 90. If the student gets an A+ grade, return true, otherwise return false. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 34</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let marks = parseInt(prompt("Enter the marks : "));
+    let checkExam = confirm("Is this marks of final exam ?");
+
+    if (marks >= 90 && checkExam) {
+        alert(true);
+    }
+    else {
+        if (marks >= 89 && marks <= 100){
+            alert(true);
+        }
+        else{
+            alert(false);
+        }
+    }
+</script>
+
+</html>
