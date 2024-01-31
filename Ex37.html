@@ -1,0 +1,31 @@
+<!-- 37. Write a JavaScript program to check a set of three numbers; if the three numbers are the same return 30; otherwise return 20; and if two numbers are the same return 40. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 37</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let num1 = parseInt(prompt("Enter the number 1 :"));
+    let num2 = parseInt(prompt("Enter the number 2 :"));
+    let num3 = parseInt(prompt("Enter the number 3 :"));
+
+    if ((num1 == num2 && num2 == num3 && num1 == num3)) {
+        alert(30);
+    }
+    else if ((num1 == num2) || (num2 == num3) || (num1 == num3)) {
+        alert(40);
+    }
+    else {
+        alert(20);
+    }
+</script>
+
+</html>
