@@ -1,0 +1,27 @@
+<!-- Write a JavaScript program to convert a given number into hours and minutes. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 43</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const covertTime = (num) => {
+        let hours = Math.floor(num / 60);
+        let mins = num % 60;
+
+        alert(hours + " Hour and " + mins + " Minute");
+    }
+    let num = parseInt(prompt("Enter the number : "));
+
+    covertTime(num);
+</script>
+
+</html>

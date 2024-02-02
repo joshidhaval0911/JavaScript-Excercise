@@ -1,0 +1,31 @@
+<!-- Write a JavaScript program to count the number of vowels in a given string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 46</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const countVowel = (str) => {
+        let cnt = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+                cnt += 1;
+            }
+        }
+        alert("Number of vowels " + cnt + " in the string.")
+    }
+
+    let str = prompt("Enter the string : ");
+
+    countVowel(str);
+</script>
+
+</html>

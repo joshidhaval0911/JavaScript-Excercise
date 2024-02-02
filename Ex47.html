@@ -1,0 +1,39 @@
+<!-- Write a JavaScript program to check whether a given string contains an equal number of p's and t's. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 47</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const countPT = (str) => {
+        let cntP = 0;
+        let cntT = 0;
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === 'p' || str[i] === 'P') {
+                cntP++;
+            } else if (str[i] === 't' || str[i] === 'T') {
+                cntT++;
+            }
+        }
+
+        if (cntP == cntT) {
+            alert(true);
+        } else {
+            alert(false);
+        }
+    }
+
+    let str = prompt("Enter the string : ");
+
+    countPT(str);
+</script>
+
+</html>
