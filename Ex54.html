@@ -1,0 +1,30 @@
+<!-- Write a JavaScript program to move the last three characters to the start of a given string. The string length must be greater than or equal to three. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 54</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const swtChar = (str) => {
+        if (str.length > 3) {
+            alert(str.substring(str.length - 3, str.length) + str.substring(0, str.length - 3));
+        }
+        else {
+            alert("Enter string greater than 3 character...");
+        }
+    };
+
+    let str = prompt("Enter the string : ");
+
+    swtChar(str);
+</script>
+
+</html>

@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 57</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const checkStr = (str) => {
+        return ((str.substring(0, 3) == 'Los' || str.substring(0, 3) == 'New') && str.length > 3);
+    };
+    let str = prompt("Enter the string : ");
+
+    alert(checkStr(str));
+</script>
+
+</html>

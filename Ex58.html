@@ -1,0 +1,29 @@
+<!-- Write a JavaScript program to create a new string from a given string. This program removes the first and last characters of the string if the first or last character is 'P'. Return the original string if the condition is not satisfied. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 58</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const splitStr = (str) => {
+        if (str.length > 1 && (str.charAt(0) == 'P' || str.charAt(0) == 'p') && (str.charAt(str.length - 1) == 'P' || str.charAt(str.length - 1) == 'p')) {
+            return str.substring(1, str.length - 1);
+        }
+        else {
+            return str;
+        }
+    };
+    let str = prompt("Enter the string : ");
+
+    alert(splitStr(str));
+</script>
+
+</html>

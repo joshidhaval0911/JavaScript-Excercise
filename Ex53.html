@@ -1,0 +1,26 @@
+<!-- Write a JavaScript program to concatenate two strings except for their first character. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 53</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const concatStr = (str1, str2) => {
+        return (str1.substring(1) + str2.substring(1));
+    };
+
+    let str1 = prompt("Enter the string 1 : ");
+    let str2 = prompt("Enter the string 2 : ");
+
+    let newStr = concatStr(str1, str2);
+    alert(newStr);
+</script>
+
+</html>

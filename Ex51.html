@@ -1,0 +1,28 @@
+<!-- Write a JavaScript program to extract the first half of a even string. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 51</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const checkStr = (str) => {
+        if (str.length % 2 === 0) {
+            alert(str.substring(0, str.length / 2));
+        }
+        else {
+            alert(str);
+        }
+    };
+    let str = prompt("Enter the string : ");
+
+    checkStr(str);
+</script>
+
+</html>

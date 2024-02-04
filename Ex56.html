@@ -1,0 +1,27 @@
+<!-- Write a JavaScript program to concatenate two strings and return the result.If the length of the strings does not match, then remove the characters from the longer string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 56</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const concatStr = (str1, str2) => {
+        const mlen = Math.min(str1.length, str2.length);
+
+        alert(str1.substring(str1.length - mlen) + str2.substring(str2.length - mlen))
+    };
+    let str1 = prompt("Enter the string 1 : ");
+    let str2 = prompt("Enter the string 2 : ");
+
+    concatStr(str1, str2);
+</script>
+
+</html>

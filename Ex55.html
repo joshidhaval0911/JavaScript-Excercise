@@ -1,0 +1,30 @@
+<!-- Write a JavaScript program to create a string using the middle three characters of a given string of odd length. The string length must be greater than or equal to three. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 55</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const findMChar = (str) => {
+        if (str.length % 2 !== 0 && str.length >= 3) {
+            const mid = (str.length + 1) / 2;
+            alert(str.substring(mid - 2, mid + 1));
+        }
+        else {
+            alert(str);
+        }
+    };
+    let str = prompt("Enter the string : ");
+
+    findMChar(str);
+</script>
+
+</html>
