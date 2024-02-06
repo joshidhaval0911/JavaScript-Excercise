@@ -1,0 +1,34 @@
+<!-- Write a JavaScript program to replace each character in a given string with the next in the English alphabet.
+Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 65</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const sortStr = (str) => {
+        let strArr = str.split('');
+
+        for (let i = 0; i < strArr.length; i++) {
+            let n = strArr[i].charCodeAt() - 'a'.charCodeAt();
+            n = (n + 1) % 26;
+            strArr[i] = String.fromCharCode(n + 'a'.charCodeAt());
+        }
+
+        return strArr.join('');
+    };
+
+    let str = prompt("Enter the string : ");
+
+    alert("Sorted String : " + sortStr(str));
+</script>
+
+</html>

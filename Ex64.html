@@ -1,0 +1,35 @@
+<!-- Write a JavaScript program to find the longest string from a given array of strings. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 64</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const longStr = (str) => {
+        let l = str[0].length;
+        let index = 0;
+
+        for (let i = 0; i < str.length; i++) {
+            if (str[i].length > l) {
+                l = str[i].length;
+                index = i;
+            }
+        }
+
+        return "Longest string is " + str[index] + " with " + l + " characters at " + (index + 1) + " index.";
+    };
+
+    let strArr = ["fasfqfeqwq", "fqefqegohoo", "qefef", "efqwfefewfqegwwf33qwqf", "qrf98gcb"];
+
+    alert(longStr(strArr));
+</script>
+
+</html>
