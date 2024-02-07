@@ -1,0 +1,30 @@
+<!-- Write a JavaScript program that takes two integers and a divisor. If the given divisor divides both integers and does not divide either, two specified integers are similar. Check whether two integers are similar or not.   -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 69</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const checkDivision = (n1, n2, d) => {
+        if (n1 % d === 0 && n2 % d === 0) {
+            return true;
+        }
+        return false;
+    };
+
+    let num1 = parseInt(prompt("Enter number 1 : "));
+    let num2 = parseInt(prompt("Enter number 2 : "));
+    let d = parseInt(prompt("Enter divisor number  : "));
+
+    alert(checkDivision(num1, num2, d));
+</script>
+
+</html>

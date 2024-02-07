@@ -1,0 +1,43 @@
+<!-- Write a JavaScript program to find the kth greatest element in a given array of integers. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 71</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const findGEle = (arr, index) => {
+        let numArr = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            numArr[i] = parseInt(arr[i])
+        }
+
+        for (let i = 0; i < numArr.length - 1; i++) {
+            for (let j = i; j < numArr.length; j++) {
+                if (numArr[i] < numArr[j]) {
+                    let t = numArr[i];
+                    numArr[i] = numArr[j];
+                    numArr[j] = t;
+                }
+            }
+        }
+
+        return numArr[index - 1];
+    };
+
+    let num = prompt("Enter the numbers : "); //Enter numbers using comma(,) seperator
+    let inVal = prompt("Enter the index number for greatest element : ");
+
+    alert("Greatest element at " + inVal + " is : " + findGEle(num.split(','), inVal));
+
+</script>
+
+</html>

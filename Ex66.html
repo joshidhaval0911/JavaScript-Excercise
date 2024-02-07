@@ -1,0 +1,34 @@
+<!-- Write a JavaScript program to divide a given array of positive integers into two parts. First element belongs to the first part, second element belongs to the second part, and third element belongs to the first part and so on. Now compute the sum of two parts and store it in an array of size two. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 66</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const calcArr = (arr) => {
+        let sumOdd = 0;
+        let sumEven = 0;
+
+        for (let i = 0, j = 1; i < arr.length, j < arr.length; i += 2, j += 2) {
+            sumOdd += parseInt(arr[i]);
+            sumEven += parseInt(arr[j]);
+        }
+
+        return ("Part 1 sum : " + sumOdd + " Part 2 sum : " + sumEven);
+    };
+
+    let num = prompt("Enter the numbers : "); //Enter numbers using comma(,) seperator
+    let numArr = num.split(',');
+
+    console.log(calcArr(numArr));
+</script>
+
+</html>
