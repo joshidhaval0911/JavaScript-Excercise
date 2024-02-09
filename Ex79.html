@@ -1,0 +1,46 @@
+<!-- Write a JavaScript program to check if there is at least one element in two given sorted arrays of integers. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 79</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const findCmnEle = (arr1, arr2) => {
+        let nArr1 = [];
+        let nArr2 = [];
+
+        for (let i = 0; i < arr1.length; i++) {
+            nArr1[i] = parseInt(arr1[i]);
+        }
+
+        for (let i = 0; i < arr2.length; i++) {
+            nArr2[i] = parseInt(arr2[i]);
+        }
+
+        for (let i = 0; i < nArr1.length; i++) {
+            for (let j = 0; j < nArr1.length; j++) {
+                if (nArr1[i] === nArr2[j])
+                    return true;
+            }
+        }
+        return false;
+    };
+
+    let num1 = prompt("Enter the numbers : ");//Enter numbers using comma(,) seperator
+    let num2 = prompt("Enter the numbers : ");//Enter numbers using comma(,) seperator
+    num1 = num1.split(',');
+    num2 = num2.split(',');
+
+    alert(findCmnEle(num1, num2));
+
+</script>
+
+</html>

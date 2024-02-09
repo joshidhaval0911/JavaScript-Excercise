@@ -1,0 +1,37 @@
+<!-- Write a JavaScript program to compute the sum of the absolute differences of consecutive numbers in a given array of integers. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 77</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const findDiffSum = (arr) => {
+        let nArr = [];
+        let sum = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            nArr[i] = parseInt(arr[i]);
+        }
+
+        for (let i = 0; i < nArr.length - 1; i++) {
+            sum += Math.abs(nArr[i] - nArr[i + 1]);
+        }
+        return sum;
+    };
+
+    let num = prompt("Enter the numbers : ");
+    num = num.split(',');
+    console.log(num);
+
+    alert(findDiffSum(num));
+</script>
+
+</html>

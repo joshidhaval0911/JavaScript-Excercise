@@ -1,0 +1,40 @@
+<!-- Write a JavaScript program to find the maximum difference between any two adjacent elements of a given array of integers -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 73</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const findDiff = (arr) => {
+        let nArr = [];
+        let diff = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            nArr[i] = parseInt(arr[i]);
+        }
+
+        for (let i = 0; i < nArr.length - 1; i++) {
+            let temp = Math.abs(nArr[i] - nArr[i + 1]);
+            if (temp > diff) {
+                diff = temp;
+            }
+        }
+        return diff;
+    };
+
+    let num = prompt("Enter the numbers : ");
+    num = num.split(',');
+    console.log(num);
+
+    alert(findDiff(num));
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!-- Write a JavaScript program to find the maximum difference among all possible pairs of a given array of integers. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 74</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const findDiff = (arr) => {
+        let nArr = [];
+        let diff = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            nArr[i] = parseInt(arr[i]);
+        }
+
+        for (let i = 0; i < nArr.length - 1; i++) {
+            for (let j = 0; j < nArr.length - 1; j++) {
+                let temp = Math.abs(nArr[i] - nArr[j]);
+                if (temp > diff) {
+                    diff = temp;
+                }
+            }
+        }
+        return diff;
+    };
+
+    let num = prompt("Enter the numbers : ");
+    num = num.split(',');
+    console.log(num);
+
+    alert(findDiff(num));
+</script>
+
+</html>

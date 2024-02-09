@@ -1,0 +1,47 @@
+<!-- Write a JavaScript program to find the number appearing most frequently in a given array of integers. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 75</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const findRptNumm = (arr) => {
+        let nArr = [];
+        let index = 0;
+        let max = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            nArr[i] = parseInt(arr[i]);
+        }
+
+        for (let i = 0; i < nArr.length; i++) {
+            let rpt = 0;
+            for (let j = 0; j < nArr.length; j++) {
+                if (nArr[i] === nArr[j]) {
+                    rpt++;
+                }
+                if (rpt > max && rpt > 1) {
+                    max = rpt;
+                    index = j;
+                }
+            }
+        }
+        return "The most repeated number in the array is " + nArr[index] + " with " + max + " times.";
+    };
+
+    let num = prompt("Enter the numbers : ");
+    num = num.split(',');
+    console.log(num);
+
+    alert(findRptNumm(num));
+</script>
+
+</html>

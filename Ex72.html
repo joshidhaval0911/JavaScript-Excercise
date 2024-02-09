@@ -1,0 +1,49 @@
+<!-- Write a JavaScript program to find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order) in a given array of positive integers.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 72</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    const calcMaxSum = (arr, n) => {
+        let nArr = [];
+        let temp = 0;
+        let res = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            nArr[i] = parseInt(arr[i]);
+        }
+
+        console.log(nArr);
+        for (var i = 0; i < n - 1; i++) {
+            temp += nArr[i];
+        }
+        for (var i = n - 1; i < nArr.length; i++) {
+            temp += nArr[i];
+            if (temp > res) {
+                res = temp;
+            }
+            temp -= nArr[i - n + 1];
+        }
+        return res;
+    }
+
+    let num = prompt("Enter the numbers : ");
+    num = num.split(',');
+    console.log(num);
+    let n = parseInt(prompt("How many number of sum you want : "));
+
+    alert(calcMaxSum(num, n));
+
+</script>
+
+</html>

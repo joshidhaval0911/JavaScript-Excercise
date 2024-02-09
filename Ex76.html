@@ -1,0 +1,40 @@
+<!-- Write a JavaScript program to replace all numbers with a specified number in an array of integers. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 76</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const changeNum = (arr, oVal, nVal) => {
+        let nArr = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            nArr[i] = parseInt(arr[i]);
+        }
+
+        for (let i = 0; i < nArr.length; i++) {
+            if (nArr[i] === oVal)
+                nArr[i] = nVal;
+        }
+
+        return nArr;
+    }
+
+    let num = prompt("Enter the numbers : ");
+    num = num.split(',');
+
+    let oldN = parseInt(prompt("Enter the number which you want to change : "));
+    let newN = parseInt(prompt("Enter the new value of that number : "));
+
+    alert(changeNum(num, oldN, newN));
+</script>
+
+</html>

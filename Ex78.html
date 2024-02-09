@@ -1,0 +1,37 @@
+<!-- Write a JavaScript program to check whether it is possible to rearrange the characters of a given string. This is in such a way that it will become equal to another given string. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 78</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const compareStr = (s1, s2) => {
+        let sArr1 = s1.split('');
+        let sArr2 = s2.split('');
+        let res = true;
+
+        sArr1.sort();
+        sArr2.sort();
+
+        for (let i = 0; i < Math.max(sArr1.length, sArr2.length); i++) {
+            if (sArr1[i] !== sArr2[i])
+                res = false;
+        }
+
+        return res;
+    };
+
+    let str1 = prompt("Enter the string 1 : ");
+    let str2 = prompt("Enter the string 2 : ");
+
+    alert(compareStr(str1, str2));
+</script>
+
+</html>
