@@ -1,0 +1,38 @@
+<!-- Write a JavaScript program to find the number of times to replace a given number with the sum of its digits. This is until it converts to a single-digit number.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 81</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var cnt = 1;
+    const checkSingleDigit = (n) => {//123
+        let s = 0;
+        let t = n;
+
+        while (t > 0) {
+            s += Math.floor(t % 10);
+            t = Math.floor(t / 10);
+            console.log(s);
+        }
+
+        if (s > 9) {
+            checkSingleDigit(s);
+            cnt++;
+        }
+        return cnt;
+    }
+
+    let num = parseInt(prompt("Enter the number : "));
+
+    alert(checkSingleDigit(num) + " times.");
+</script>
+
+</html>
